@@ -28,12 +28,8 @@ class PokemonDetailPage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Container(
-            height: MediaQuery.of(context)
-                .size
-                .width, // Altura igual al ancho de la pantalla
-            width: MediaQuery.of(context)
-                .size
-                .width, // Ancho igual al ancho de la pantalla
+            height: Get.height / 2, // Altura igual al ancho de la pantalla
+            width: Get.width, // Ancho igual al ancho de la pantalla
             color: Colors.red, // Color de fondo rojo
             child: Image.network(
               pokemon.imageUrl,

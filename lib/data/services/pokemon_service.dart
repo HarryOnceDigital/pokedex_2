@@ -7,7 +7,7 @@ class PokemonService {
   // Método para obtener la lista de Pokémon desde la API.
   Future<Map<String, dynamic>> fetchPokemonList() async {
     final response =
-        await http.get(Uri.parse('$baseUrl/pokemon?offset=0&limit=20'));
+        await http.get(Uri.parse('$baseUrl/pokemon?offset=0&limit=100'));
     if (response.statusCode == 200) {
       // Si la respuesta es exitosa, decodifica los datos JSON y devuelve un mapa.
       return json.decode(response.body);
